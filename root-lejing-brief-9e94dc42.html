@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乐竞体育 · 清晰了解，轻松出发</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafafa;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 2.5rem 1rem 3rem;
+    }
+
+    .page-wrap {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    /* hero 区 */
+    .hero {
+      margin-bottom: 2.8rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      color: #121212;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #525252;
+      max-width: 90%;
+      border-left: 3px solid #d4d4d4;
+      padding-left: 1rem;
+    }
+
+    /* 通用卡片与分隔 */
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 0.9rem;
+      color: #1f1f1f;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 0.3rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 1.2rem 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.2rem 1rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+      transition: box-shadow 0.2s;
+      border: 1px solid #ededed;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .card .title {
+      font-weight: 550;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #494949;
+    }
+
+    /* 说明区 */
+    .desc-block {
+      background: #ffffff;
+      padding: 1.5rem 1.5rem 1.8rem;
+      border-radius: 16px;
+      border: 1px solid #ececec;
+      margin-bottom: 2rem;
+    }
+
+    .desc-block p {
+      margin-bottom: 0.9rem;
+    }
+
+    .desc-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inline-link {
+      color: #1e5b9e;
+      text-decoration: none;
+      border-bottom: 1px solid #b4c9e0;
+      transition: 0.15s;
+      font-weight: 450;
+    }
+
+    .inline-link:hover {
+      border-bottom-color: #1e5b9e;
+      color: #0a3d6b;
+    }
+
+    /* FAQ 摘要 */
+    .faq {
+      margin: 2rem 0 2.2rem;
+      background: #f6f6f6;
+      border-radius: 18px;
+      padding: 1.2rem 1.6rem 1.6rem;
+    }
+
+    .faq h2 {
+      border-bottom: none;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+
+    /* 底部 */
+    .footer-links {
+      margin-top: 1.8rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #dcdcdc;
+      font-size: 0.9rem;
+      color: #5e5e5e;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.2rem;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: #3a3a3a;
+      text-decoration: none;
+      border-bottom: 1px dotted #bfbfbf;
+    }
+
+    .footer-links a:hover {
+      border-bottom-color: #1e5b9e;
+      color: #1e5b9e;
+    }
+
+    .footnote {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #7d7d7d;
+    }
+
+    /* 响应式 */
+    @media (max-width: 540px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .hero .sub {
+        font-size: 0.95rem;
+      }
+
+      .desc-block {
+        padding: 1.2rem;
+      }
+
+      .faq {
+        padding: 1rem 1.2rem 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <!-- hero -->
+    <div class="hero">
+      <h1>乐竞体育 · 一站知晓</h1>
+      <div class="sub">从这里快速感受平台定位与核心服务</div>
+    </div>
+
+    <!-- 优势区 卡片 -->
+    <div class="section">
+      <h2>⚡ 平台特点速览</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="icon">🧭</div>
+          <div class="title">清晰分类</div>
+          <p>赛事项目与休闲内容采用直观分区，降低浏览负担。</p>
+        </div>
+        <div class="card">
+          <div class="icon">📱</div>
+          <div class="title">多端适应</div>
+          <p>移动端与桌面端访问体验保持一致，信息布局稳定。</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔍</div>
+          <div class="title">搜索友好</div>
+          <p>常见问题与板块带有明确关键词，提升查找效率。</p>
+        </div>
+        <div class="card">
+          <div class="icon">⚙️</div>
+          <div class="title">低频更新</div>
+          <p>内容结构相对稳定，适合需要长期参考的用户。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 说明区 从用户快速识别用途 -->
+    <div class="desc-block">
+      <p>很多初次接触 <a href="https://root-lejing.com" class="inline-link">乐竞体育</a> 的朋友，首先想知道的是：这个网站主要提供什么？简单来说，它围绕体育赛事与休闲竞技构建了一套信息聚合页面，方便浏览者了解相关项目、动态与赛事参考。</p>
+      <p>你不需要反复跳转或猜测功能入口——首页的导航区与内容推荐均保持统一的视觉语言。无论你是想了解热门赛事，还是寻找日常休闲参考，都能在几个点击以内找到对应板块。</p>
+      <p>平台并未采用花哨的营销描述，而是尽量让每个分类标题直接反映其内容。这种克制的设计，也让使用者更快建立对网站的心理模型，减少试错成本。</p>
+    </div>
+
+    <!-- FAQ 摘要 (真实方向) -->
+    <div class="faq">
+      <h2>❓ 常见疑问简述</h2>
+      <div class="faq-item">
+        <div class="faq-q">Q：乐竞体育主要面向哪类用户？</div>
+        <div class="faq-a">A：对体育赛事、竞技信息有浏览需求的普通用户，以及想快速了解平台结构的访客。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q：是否包含实时比分或复杂数据？</div>
+        <div class="faq-a">A：网站侧重信息展示与参考，不提供实时数据流或复杂分析工具，属于轻量级浏览体验。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q：移动设备访问效果如何？</div>
+        <div class="faq-a">A：页面默认适配常见屏幕尺寸，菜单与卡片在窄屏上会自动排列，阅读体验基本一致。</div>
+      </div>
+    </div>
+
+    <!-- 底部链接区域 -->
+    <div class="footer-links">
+      <span>首页</span>
+      <span>·</span>
+      <a href="https://root-lejing.com">乐竞体育</a>
+      <span>·</span>
+      <span>常见问题</span>
+      <span>·</span>
+      <span>内容索引</span>
+    </div>
+
+    <div class="footnote">
+      — 本介绍页仅用于展示网站定位，实际内容以官网为准 —
+    </div>
+  </div>
+</body>
+</html>

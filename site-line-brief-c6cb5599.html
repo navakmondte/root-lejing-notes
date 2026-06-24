@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f4f6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e2a35;
+            line-height: 1.65;
+            padding: 2rem 1.2rem;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #1f2a36;
+        }
+
+        .hero p {
+            max-width: 620px;
+            margin: 1rem auto 0.6rem;
+            color: #4a5a68;
+            font-size: 1.05rem;
+        }
+
+        .hero .sub {
+            display: inline-block;
+            background: #e4e8ed;
+            padding: 0.25rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #3f4f5e;
+        }
+
+        /* 卡片通用 */
+        .card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 2rem 1.8rem;
+            margin-bottom: 1.8rem;
+            border: 1px solid #e3e7ec;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #1c2a36;
+            border-left: 3px solid #6e8ba3;
+            padding-left: 0.85rem;
+        }
+
+        .card p {
+            margin-bottom: 0.9rem;
+            color: #30404d;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 两栏网格 */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+        }
+
+        @media (max-width: 680px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+
+        /* 列表修饰 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0 0.5rem 1.2rem;
+            position: relative;
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            color: #7892a8;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eaeef3;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            color: #2c4050;
+            margin-right: 0.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .tag-blue {
+            background: #d6e0ea;
+            color: #1e3a4e;
+        }
+
+        .small-note {
+            font-size: 0.9rem;
+            color: #587386;
+            border-top: 1px solid #e3e9ef;
+            padding-top: 1rem;
+            margin-top: 0.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 550;
+            color: #1e2f3c;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-item p {
+            margin: 0;
+            color: #3a4e5d;
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #b6c6d4;
+            color: #2b4050;
+            padding: 0.5rem 1.6rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            margin-top: 0.5rem;
+        }
+
+        .btn-ghost:hover {
+            background: #e9eff5;
+            border-color: #8a9fb2;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #687f91;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #dbe1e8;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>爱游戏 · 产品说明</h1>
+        <p class="sub">稳定的内容入口 · 克制的功能叙述</p>
+        <p>这是一份面向使用者的概要说明，帮助你了解平台定位、主要特点以及日常使用中值得留意的细节。以下内容基于近期版本整理。</p>
+    </div>
+
+    <!-- 摘要卡片 -->
+    <div class="card">
+        <h2>摘要 · 平台定位</h2>
+        <p><a href="https://site-line-igame.com" style="color: #1d4b6e; text-decoration: underline; font-weight: 500;">爱游戏</a> 是一个专注于信息呈现与内容聚合的页面。它不强调复杂的交互，而是将重心放在“稳定的访问入口”与“清晰的结构叙述”上。你可以将它理解为一个内容索引——在需要时能快速找到对应的功能或资讯区域。</p>
+        <p>整个页面采用分区卡片设计，每个模块承担独立的说明角色。没有浮夸的动效，也没有冗余的弹窗，减少使用过程中的认知干扰。</p>
+    </div>
+
+    <!-- 两栏：亮点 + 使用建议 -->
+    <div class="grid-2">
+        <!-- 亮点 -->
+        <div class="card">
+            <h2>亮点</h2>
+            <ul class="feature-list">
+                <li>信息分区逻辑清晰，核心模块一目了然</li>
+                <li>页面加载轻量，无需等待多余资源</li>
+                <li>链接与引导克制，减少误触或无关跳转</li>
+                <li>视觉风格统一，浅灰背景配合柔和阴影，阅读舒适</li>
+                <li>响应式适配，移动端与桌面端均保持可读性</li>
+            </ul>
+            <div style="margin-top: 0.8rem;">
+                <span class="tag">稳定入口</span>
+                <span class="tag tag-blue">内容优先</span>
+                <span class="tag">低干扰</span>
+            </div>
+        </div>
+
+        <!-- 使用建议 -->
+        <div class="card">
+            <h2>使用建议</h2>
+            <p>如果你之前从未打开过 <a href="https://site-line-igame.com" style="color: #1d4b6e; text-decoration: underline;">爱游戏</a>，建议先从摘要部分开始浏览，了解模块划分后再进入具体内容。日常使用中，可以将其设为固定标签页或书签，便于快速回溯。</p>
+            <p>由于页面以信息说明为主，不需要频繁刷新。如果你发现内容有调整或更新，通常说明背后的结构或索引发生了变动，届时可以重新阅读相关卡片。</p>
+            <p>移动端访问时，建议保持屏幕方向为竖屏，以获得最佳的卡片排列效果。</p>
+        </div>
+    </div>
+
+    <!-- 使用场景 + 提示 -->
+    <div class="card">
+        <h2>适用场景</h2>
+        <p>以下是一些常见的使用情形，供你参考：</p>
+        <ul class="feature-list" style="margin-bottom: 0.8rem;">
+            <li>需要快速了解某个功能模块的定位时，直接查看对应卡片标题与首段</li>
+            <li>作为内容索引，在多个方向中筛选自己感兴趣的部分</li>
+            <li>向他人介绍平台时，可以整体展示页面的分区与叙述逻辑</li>
+            <li>日常浏览中希望获得低干扰、简洁的阅读体验</li>
+        </ul>
+        <div class="small-note">
+            ⚡ 提示：页面本身不收集个人数据，也不包含第三方追踪脚本，可以放心浏览。
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 + 额外说明 -->
+    <div class="card">
+        <h2>常见疑问 · 摘要</h2>
+        <div class="faq-item">
+            <strong>这个页面是做什么的？</strong>
+            <p>它是一份产品说明页，用来介绍 <a href="https://site-line-igame.com" style="color: #1d4b6e; text-decoration: underline;">爱游戏</a> 的基本结构、特点和使用建议。本身不包含游戏内容，而是作为入口说明存在。</p>
+        </div>
+        <div class="faq-item">
+            <strong>链接会跳转到哪里？</strong>
+            <p>页面中唯一的站外链接指向 https://site-line-igame.com，也就是平台的主页面。所有其他内容均为当前页的说明文字。</p>
+        </div>
+        <div class="faq-item">
+            <strong>为什么页面这么简洁？</strong>
+            <p>设计上倾向于克制与自然，减少不必要的视觉元素，让信息本身成为焦点。柔和阴影与细边框增加了层次感，但并不喧宾夺主。</p>
+        </div>
+        <div style="margin-top: 1rem; text-align: right;">
+            <a href="https://site-line-igame.com" class="btn-ghost">爱游戏</a>
+        </div>
+    </div>
+
+    <!-- 尾注 -->
+    <div class="footer-note">
+        <p>产品说明页 · 内容基于近期版本整理 · 实际以 <a href="https://site-line-igame.com" style="color: #2d5775; text-decoration: none; border-bottom: 1px dotted #8daabf;">爱游戏</a> 页面为准</p>
+        <p style="margin-top: 0.3rem; font-size: 0.8rem; color: #7e96aa;">仅作为介绍参考，不构成承诺或保证</p>
+    </div>
+
+</div>
+</body>
+</html>
